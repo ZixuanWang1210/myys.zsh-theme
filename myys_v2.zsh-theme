@@ -56,7 +56,16 @@ ys_hg_prompt_info() {
 
 local exit_code="%(?,,C:%{$fg[red]%}%?%{$reset_color%})"
 
-ipStr=$(ip addr show | grep 'inet ' | grep -v '127.0.0.1' | awk '{print $2}' | cut -d '/' -f1)
+ipStr=$(
+  ip addr show                        \
+    | grep 'inet '                   \
+    | grep -v '127.0.0.1'            \
+    | grep -v 'docker'               \
+    | awk '{print $2}'               \
+    | cut -d '/' -f1                 \
+    | paste -sd '|' -
+)
+
 # Prompt format:
 #
 # PRIVILEGES USER @ MACHINE in DIRECTORY on git:BRANCH STATE [TIME] C:LAST_EXIT_CODE
