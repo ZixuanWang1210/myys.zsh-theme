@@ -31,3 +31,17 @@
 - 2019.9.12：修复BUG（连续使用Tab导致当前命令行乱码）
 - 2021.11.29：更新V2版本，优化界面，显示IP地址。
 - 2024.11.6：修复BUG（IP地址获取出错）
+
+```bash
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/marlonrichert/zsh-autocomplete ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autocomplete
+plugins=(
+     git
+     zsh-autocomplete
+     zsh-autosuggestions
+     zsh-syntax-highlighting
+     z
+     # autocd
+)
+```
