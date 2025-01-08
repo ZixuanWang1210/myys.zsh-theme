@@ -19,6 +19,8 @@
 
 4 在`~/.condarc`中添加`changeps1: False`
 
+`conda config --set changeps1 False`
+
 # myys_v2.zsh-theme
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/55bf1c99ca7e462a807d86eaa2509091.png)
